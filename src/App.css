@@ -20,3 +20,6 @@ body{
 	grid-area: p;
 		background: rgb(70, 79, 121);
 }
+.active{
+  background: rgb(152, 164, 218);
+}

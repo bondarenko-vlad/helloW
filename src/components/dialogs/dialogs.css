@@ -5,25 +5,30 @@
   grid-gap: 20px;
   grid-template-columns: 4fr 8fr;
 }
-.message{
+.messages{
   grid-area: message;
 }
-.message p {
+.message  {
+
   background-color: rgb(148, 161, 235);
-  margin:10px;
-  padding: 10px 20px;
+  margin:20px;
+  padding: 5px 10px;
   border-radius: 10px;
 }
 .dialog{
   grid-area: dialog;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
+
 }
-.dialog p{
+.dialog a{
+  display: block;
   margin: 0;
-  padding: 10px 20px
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
 }
-.dialog p:hover{
+.dialog a:hover{
   background: rgb(99, 95, 173)
 }
 .code{
@@ -40,5 +45,7 @@
   padding: 5px;
   margin: 5px;
   font-size: 20px;
-
+}
+.user{
+  padding: 0 20px;
 }
