@@ -3,19 +3,17 @@ import './dialogs.css'
 import DialogsItem from './dialogsItem/DialogsItem'
 import Message from './messages/Message'
 
+let dialogNames = [{name:'Иван Иванов', id:1}, {name:'Илон Маск', id:2}, {name:'Билл Гейтс', id:3}]
+let messageItems = [{message:'привет', id:1}, {message:'го на Марс', id:2}, {message:'Где мой чип?', id:3}]
 
 const Dialogs = (props) => {
   return(
     <div className='dialogs'>
       <div className='dialog'>
-        <DialogsItem name={'Иван Иванов'} id={'1'} />
-        <DialogsItem name={'Илон Маск'} id={'2'} />
-        <DialogsItem name={'Билл Гейтс'} id={'3'} />
+      {dialogNames.map((e)=><DialogsItem name={e.name} id={e.id} />)}
     </div>
     <div className='messages'>
-        <Message message={'Привет'} />
-        <Message message={'Го на Марс'} />
-        <Message message={'Где мой чип?'} />
+      {messageItems.map((e)=><Message message={e.message} id={e.id} />)}
         <div className='code'>
           <input type='text' name='message' placeholder='Enter your message' />
           <br /><button>Send</button>
