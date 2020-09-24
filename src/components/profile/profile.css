@@ -19,3 +19,8 @@
 .post{
 	margin: 20px 0;
 }
+.likes{
+	color: rgb(124, 153, 242);
+	background-color: white;
+	padding: 2px
+}

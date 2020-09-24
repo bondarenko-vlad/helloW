@@ -13,3 +13,19 @@
 .navbar a:hover{
 	background-color: #fff9
 }
+.friend img{
+	width: 90%;
+	height: 50px;
+}
+.friend{
+	display: inline-block;
+	width: 30%;
+	cursor: pointer;
+	padding: 2px;
+}
+.friends a{
+	font-size: 20px;
+}
+.friend:hover{
+	background: rgb(140, 155, 233)
+}
