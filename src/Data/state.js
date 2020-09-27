@@ -25,6 +25,15 @@ let state = {
       {name: 'Arny', ava: 'https://igate.com.ua/upload/photo/0001/0001/3383/6955/55.jpg'}
     ]
   }
+}
 
+export let addPost = (postText) => {
+  let newPost= {
+    text: postText,
+    id: 4,
+    likes:0
+  }
+  state.profilePage.postsData.push(newPost)
+  console.log(state);
 }
 export default state
