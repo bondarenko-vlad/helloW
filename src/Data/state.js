@@ -1,3 +1,4 @@
+import {rerenderTree} from './../render.js'
 let state = {
   profilePage:{
     postsData: [
@@ -14,7 +15,7 @@ let state = {
     ],
     messagesData: [
       {message:'привет', id:1},
-      {message:'го на Марс', id:2},
+      {message:'гоy на Марс', id:2},
       {message:'Где мой чип?', id:3}
     ]
   },
@@ -33,7 +34,16 @@ export let addPost = (postText) => {
     id: 4,
     likes:0
   }
-  state.profilePage.postsData.push(newPost)
-  console.log(state);
+  state.profilePage.postsData.unshift(newPost)
+  rerenderTree(state)
+}
+export let sendMessage = (message) => {
+  let newMessage= {
+    message: message,
+    id: 4
+  }
+  state.dialogsPage.messagesData.push(newMessage)
+  rerenderTree(state)
+
 }
 export default state

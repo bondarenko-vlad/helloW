@@ -3,14 +3,10 @@ import Post from './post/Post'
 
 let postText = React.createRef()
 
-
-
-
-
 function Posts(props){
   let addPost = () => {
     props.addPost(postText.current.value)
-
+    postText.current.value=''
   }
   return(
       <div className='posts'>
