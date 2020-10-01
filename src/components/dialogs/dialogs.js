@@ -9,8 +9,11 @@ const Dialogs = (props) => {
   let sendMessage = () => {
     let text = ref.current.value
     props.sendMessage(text)
-    ref.current.value = ''
   }
+let onMessageChange = () => {
+  props.onMessageChange(ref.current.value)
+}
+console.log(props);
   return(
     <div className='dialogs'>
       <div className='dialog'>
@@ -19,7 +22,7 @@ const Dialogs = (props) => {
     <div className='messages'>
       {props.dialogsPage.messagesData.map((e)=><Message message={e.message} id={e.id} />)}
         <div className='code'>
-          <input ref={ref} type='text' name='message' placeholder='Enter your message' />
+          <input onChange={onMessageChange} value={props.newMessageText} ref={ref} type='text' name='message' placeholder='Enter your message' />
           <br />
           <button onClick={sendMessage}>Send</button>
         </div>

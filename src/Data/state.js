@@ -5,7 +5,8 @@ let state = {
       {text:'Hi, world', id:1, likes:0},
       {text:'Im Elon Mask, really', id:2, likes:3},
       {text:'Give me some bitcoins', id:3, likes: 10},
-    ]
+    ],
+    newPostText:'hello'
   },
   dialogsPage:{
     dialogsData: [
@@ -17,8 +18,10 @@ let state = {
       {message:'привет', id:1},
       {message:'гоy на Марс', id:2},
       {message:'Где мой чип?', id:3}
-    ]
+    ],
+    newMessageText: 'hello'
   },
+
   sidebar:{
     friends: [
       {name: 'Bill', ava: 'https://i.pinimg.com/originals/bc/8b/2b/bc8b2b3340e52f25699d3c7091eef912.png'},
@@ -35,8 +38,19 @@ export let addPost = (postText) => {
     likes:0
   }
   state.profilePage.postsData.unshift(newPost)
+  state.profilePage.newPostText = ''
   rerenderTree(state)
 }
+export let onPostChange = (text) => {
+  state.profilePage.newPostText = text
+  rerenderTree(state)
+}
+
+
+
+
+
+
 export let sendMessage = (message) => {
   let newMessage= {
     message: message,
@@ -44,6 +58,9 @@ export let sendMessage = (message) => {
   }
   state.dialogsPage.messagesData.push(newMessage)
   rerenderTree(state)
-
+}
+export let onMessageChange = (text) => {
+  state.dialogsPage.newMessageText = text
+  rerenderTree(state)
 }
 export default state

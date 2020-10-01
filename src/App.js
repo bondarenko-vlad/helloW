@@ -16,9 +16,24 @@ function App(props){
     <Header />
     <Navbar friends={props.state.sidebar.friends} />
     <div className='wrapper-content'>
-      <Route exact path='/' render={()=><Profile profilePage={props.state.profilePage} addPost={props.addPost} />} />
-      <Route path='/profile' render={()=><Profile profilePage={props.state.profilePage} addPost={props.addPost} />} />
-      <Route path='/dialogs' render={()=><Dialogs dialogsPage={props.state.dialogsPage} sendMessage={props.sendMessage}  />} />
+      <Route exact path='/' render={()=><Profile
+          profilePage={props.state.profilePage}
+          newPostText={props.state.profilePage.newPostText}
+          addPost={props.addPost}
+          onPostChange={props.onPostChange}
+           />} />
+      <Route path='/profile' render={()=><Profile
+          profilePage={props.state.profilePage}
+          newPostText={props.state.profilePage.newPostText}
+          addPost={props.addPost}
+          onPostChange={props.onPostChange}
+           />} />
+         <Route path='/dialogs' render={()=><Dialogs
+             onMessageChange={props.onMessageChange}
+             dialogsPage={props.state.dialogsPage}
+             sendMessage={props.sendMessage}
+             newMessageText={props.state.dialogsPage.newMessageText}
+               />} />
     </div>
     </BrowserRouter>
     </div>
