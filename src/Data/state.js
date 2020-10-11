@@ -1,4 +1,4 @@
-import {rerenderTree} from './../render.js'
+
 let state = {
   profilePage:{
     postsData: [
@@ -24,11 +24,14 @@ let state = {
 
   sidebar:{
     friends: [
-      {name: 'Bill', ava: 'https://i.pinimg.com/originals/bc/8b/2b/bc8b2b3340e52f25699d3c7091eef912.png'},
-      {name: 'Vanya', ava: 'https://uznayvse.ru/images/celebs/2018/11/ivan-the-terrible_big.jpg'},
-      {name: 'Arny', ava: 'https://igate.com.ua/upload/photo/0001/0001/3383/6955/55.jpg'}
+      {name: 'Bill', ava: require('../img/bill.jpg')},
+      {name: 'Vanya', ava: require('../img/ivan.jpg')},
+      {name: 'Arny', ava: require('../img/arny.jpg')}
     ]
   }
+}
+let rerenderTree = () => {
+  console.log('It is fake function');
 }
 
 export let addPost = (postText) => {
@@ -39,16 +42,12 @@ export let addPost = (postText) => {
   }
   state.profilePage.postsData.unshift(newPost)
   state.profilePage.newPostText = ''
-  rerenderTree(state)
+  rerenderTree()
 }
 export let onPostChange = (text) => {
   state.profilePage.newPostText = text
-  rerenderTree(state)
+  rerenderTree()
 }
-
-
-
-
 
 
 export let sendMessage = (message) => {
@@ -63,4 +62,9 @@ export let onMessageChange = (text) => {
   state.dialogsPage.newMessageText = text
   rerenderTree(state)
 }
+
+export let subscribe = (observer) => {
+  rerenderTree = observer
+}
 export default state
+window.state=state
