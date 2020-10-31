@@ -10,6 +10,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 
 
 function App(props){
+  
   return(
     <div className='wrapper'>
     <BrowserRouter>
