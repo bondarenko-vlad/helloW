@@ -8,10 +8,10 @@ let ref = React.createRef()
 const Dialogs = (props) => {
   let sendMessage = () => {
     let text = ref.current.value
-    props.sendMessage(text)
+    props.dispatch({type:'SEND-MESSAGE'})
   }
 let onMessageChange = () => {
-  props.onMessageChange(ref.current.value)
+  props.dispatch({type:'MESSAGE-CHANGE',text:ref.current.value})
 }
 console.log(props);
   return(

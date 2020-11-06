@@ -4,14 +4,12 @@ import './index.css';
 import App from './App';
 import store from './Data/state.js'
 
-function rerenderTree(state){
+function rerenderTree(state) {
   ReactDOM.render(
     <React.StrictMode>
       <App state={state}
-        onMessageChange={store.onMessageChange.bind(store)}
-        onPostChange={store.onPostChange.bind(store)}
-        addPost={store.addPost.bind(store)}
-        sendMessage={store.sendMessage.bind(store)} />
+        dispatch={store.dispatch.bind(store)}
+      />
     </React.StrictMode>,
     document.getElementById('root')
   );
