@@ -1,7 +1,5 @@
-let ADD_POST = 'ADD-POST'
-let POST_CHANGE = 'POST-CHANGE'
-let SEND_MESSAGE = 'SEND-MESSAGE'
-let MESSAGE_CHANGE = 'MESSAGE-CHANGE'
+import dialogReduser from './dialogReduser'
+import profileReduser from './profileReduser'
 
 
 let store = {
@@ -43,58 +41,18 @@ let store = {
     console.log('It is fake function');
   },
   dispatch(action) {
-    if (action.type == ADD_POST) {
-      let newPost = {
-        text: this._state.profilePage.newPostText,
-        id: 4,
-        likes: 0
-      }
-      this._state.profilePage.postsData.unshift(newPost)
-      this._state.profilePage.newPostText = ''
-      this.rerenderTree(this._state)
-    } else if (action.type == POST_CHANGE) {
-      this._state.profilePage.newPostText = action.text
-      this.rerenderTree(this._state)
-    } else if (action.type == SEND_MESSAGE) {
-      let newMessage = {
-        message: this._state.dialogsPage.newMessageText,
-        id: 4
-      }
-      this._state.dialogsPage.messagesData.push(newMessage)
-      this.rerenderTree(this._state)
-    } else if (action.type == MESSAGE_CHANGE) {
-      this._state.dialogsPage.newMessageText = action.text
-      this.rerenderTree(this._state)
-    }
+    this._state.profilePage = profileReduser(this._state.profilePage, action)
+    this.rerenderTree(this._state)
+
+    this._state.dialogsPage = dialogReduser(this._state.dialogsPage, action)
+    this.rerenderTree(this._state)
   },
   subscribe(observer) {
     this.rerenderTree = observer
   }
 }
 
-export let addPostAC = () => {
-  return {
-    type:ADD_POST,
-    id: 1
-  }
-}
-export let onPostChangeAC = (text) => {
-  return {
-    type:POST_CHANGE, 
-    text:text
-  }
-}
-export let sendMessageAC = () => {
-  return {
-    type:'SEND-MESSAGE',
-    id: 1
-  }
-}
-export let onMessageChangeAC = (text) => {
-  return {
-    type:'MESSAGE-CHANGE', 
-    text:text
-  }
-}
 
+
+window.store = store
 export default store

@@ -1,8 +1,9 @@
 import React from 'react'
+import { onMessageChangeAC, sendMessageAC } from '../../Data/dialogReduser'
 import './dialogs.css'
 import DialogsItem from './dialogsItem/DialogsItem'
 import Message from './messages/Message'
-import {sendMessageAC, onMessageChangeAC} from '../../Data/state'
+
 
 let ref = React.createRef()
 
