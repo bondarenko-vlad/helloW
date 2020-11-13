@@ -1,5 +1,6 @@
 import dialogReduser from './dialogReduser'
 import profileReduser from './profileReduser'
+import sidebarReduser from './sidebarReduser';
 
 
 let store = {
@@ -46,6 +47,8 @@ let store = {
 
     this._state.dialogsPage = dialogReduser(this._state.dialogsPage, action)
     this.rerenderTree(this._state)
+
+    this._state.sidebar = sidebarReduser(this._state.sidebar, action)
   },
   subscribe(observer) {
     this.rerenderTree = observer
