@@ -1,7 +1,22 @@
 let SEND_MESSAGE = 'SEND-MESSAGE'
 let MESSAGE_CHANGE = 'MESSAGE-CHANGE'
 
-let dialogReduser = (state, action) => {
+let initialState = {
+  dialogsData: [
+    { name: 'Иван Иванов', id: 1 },
+    { name: 'Илон Маск', id: 2 },
+    { name: 'Билл Гейтс', id: 3 }
+  ],
+  messagesData: [
+    { message: 'привет', id: 1 },
+    { message: 'гоy на Марс', id: 2 },
+    { message: 'Где мой чип?', id: 3 }
+  ],
+  newMessageText: 'hello'
+}
+
+
+let dialogReduser = (state = initialState, action) => {
     if (action.type == SEND_MESSAGE) {
         let newMessage = {
           message: state.newMessageText,

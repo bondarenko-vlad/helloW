@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import store from './Data/state.js'
+import store from './Data/store'
 
 function rerenderTree(state) {
   ReactDOM.render(
@@ -14,6 +14,8 @@ function rerenderTree(state) {
     document.getElementById('root')
   );
 }
-rerenderTree(store.getState())
+rerenderTree(store.getState()) // самая первая отрисовка 
 
-store.subscribe(rerenderTree)
+store.subscribe(()=>{
+  rerenderTree(store.getState())
+})

@@ -4,7 +4,7 @@ import React from 'react'
 function Post(props){
   return(
 
-        <div class='post'>
+        <div className='post'>
           <img src={require('../../../../img/elon.jpg')} alt='profile mini photo' />
           <span>Elon Mask</span>
           <p>{props.message}</p>
