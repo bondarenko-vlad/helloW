@@ -9,14 +9,16 @@ let ref = React.createRef()
 
 
 const Dialogs = (props) => {
+
   let sendMessage = () => {
-    let text = ref.current.value
-    props.dispatch(sendMessageAC())
+    props.sendMessage()
+    
   }
+
 let onMessageChange = () => {
-  props.dispatch(onMessageChangeAC(ref.current.value))
+  props.onMessageChange(ref.current.value)
 }
-console.log(props);
+
   return(
     <div className='dialogs'>
       <div className='dialog'>

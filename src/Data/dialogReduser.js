@@ -23,6 +23,7 @@ let dialogReduser = (state = initialState, action) => {
           id: 4
         }
         state.messagesData.push(newMessage)
+        state.newMessageText = ''
       } else if (action.type == MESSAGE_CHANGE) {
         state.newMessageText = action.text  
       }
