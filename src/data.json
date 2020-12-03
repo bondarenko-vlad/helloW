@@ -1,0 +1,81 @@
+{
+    "users": [
+        {
+            "name": "Bill Gates",
+            "id":"2",
+            "status": "I'm rich",
+            "posts": [
+                {
+                    "title": "hello",
+                    "id": 1
+                },
+                {
+                    "title": "hello",
+                    "id": 2
+                },
+                {
+                    "title": "hello",
+                    "id": 3
+                }
+            ]
+
+        },
+        {
+            "name": "Elon Musk",
+            "id":"3",
+            "status": "I'm marsianin",
+            "posts": [
+                {
+                    "title": "hello",
+                    "id": 1
+                },
+                {
+                    "title": "hello",
+                    "id": 2
+                },
+                {
+                    "title": "hello",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "name": "Ivan Ivanov",
+            "id":"4",
+            "status": "I'm russian",
+            "posts": [
+                {
+                    "title": "hello",
+                    "id": 1
+                },
+                {
+                    "title": "hello",
+                    "id": 2
+                },
+                {
+                    "title": "hello",
+                    "id": 3
+                }
+            ]
+        },
+        {
+            "name": "Jason Statham",
+            "id":"5",
+            "status": "I am an actor",
+            "posts": [
+                {
+                    "title": "hello",
+                    "id": 1
+                },
+                {
+                    "title": "hello",
+                    "id": 2
+                },
+                {
+                    "title": "hello",
+                    "id": 3
+                }
+            ]
+        }
+    ]
+}

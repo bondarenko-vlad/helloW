@@ -5,6 +5,7 @@ import Navbar from './components/navbar/Navbar'
 import Profile from './components/profile/Profile'
 import { BrowserRouter, Route } from 'react-router-dom'
 import DialogsContainer from './components/dialogs/dialogsContainer'
+import Users from './components/users/users'
 
 
 
@@ -17,22 +18,15 @@ function App(props) {
         <Navbar friends={props.state.sidebar.friends} />
         <div className='wrapper-content'>
           <Route exact path='/' render={() => <Profile
-            // profilePage={props.state.profilePage}
-            // newPostText={props.state.profilePage.newPostText}
-            // dispatch={props.dispatch}
             store={props.store}
           />} />
           <Route path='/profile' render={() => <Profile
-            // profilePage={props.state.profilePage}
-            // newPostText={props.state.profilePage.newPostText}
-            // dispatch={props.dispatch}
             store={props.store}
           />} />
           <Route path='/dialogs' render={() => <DialogsContainer
-            // dialogsPage={props.state.dialogsPage}
-            // newMessageText={props.state.dialogsPage.newMessageText}
-            // dispatch={props.dispatch}
             store={props.store}
+          />} />
+          <Route path='/users' render={() => <Users
           />} />
         </div>
       </BrowserRouter>

@@ -4,8 +4,6 @@ import './dialogs.css'
 import Dialogs from './dialogs'
 
 
-
-
 const DialogsContainer = (props) => {
     let state = props.store.getState().dialogsPage
     let dispatch = props.store.dispatch

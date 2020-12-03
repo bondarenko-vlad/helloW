@@ -12,3 +12,7 @@
 [1031/174747.511:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: Заданная длина записи со сведениями не соответствует длине, требуемой для указанного класса сведений. (0xc0000004)
 [1031/174747.541:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\vladb\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\d5af4226-6512-4edb-9e29-462ec4248841: Системе не удается найти указанный путь. (0x3)
 [1031/182207.417:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: Заданная длина записи со сведениями не соответствует длине, требуемой для указанного класса сведений. (0xc0000004)
+[1126/124922.647:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)
+[1126/171336.480:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: Заданная длина записи со сведениями не соответствует длине, требуемой для указанного класса сведений. (0xc0000004)
+[1126/171336.521:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\vladb\AppData\Local\Google\Chrome\User Data\Crashpad\attachments\d41dff7d-267c-4d2e-9843-90ec2cfb9220: Системе не удается найти указанный путь. (0x3)
+[1128/193316.489:ERROR:directory_reader_win.cc(43)] FindFirstFile: Системе не удается найти указанный путь. (0x3)

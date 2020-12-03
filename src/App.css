@@ -1,25 +1,27 @@
-body{
-	background: rgb(152, 164, 218);
+body {
+    background: rgb(152, 164, 218);
 }
-.wrapper{
-	display:grid;
-	color: white;
-  width:100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  grid-template-areas:
-  'h h'
-	'n p';
-  grid-gap: 10px;
-	grid-template-columns: 2fr 10fr;
+
+.wrapper {
+    display: grid;
+    color: white;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-areas: 'h h' 'n p';
+    grid-gap: 10px;
+    grid-template-columns: 2fr 10fr;
 }
-.wrapper > div{
-	border-radius: 10px;
+
+.wrapper>div {
+    border-radius: 10px;
 }
-.wrapper-content{
-	grid-area: p;
-		background: rgb(70, 79, 121);
+
+.wrapper-content {
+    grid-area: p;
+    background: rgb(70, 79, 121);
 }
-.active{
-  background: rgb(152, 164, 218);
+
+.active {
+    background: rgb(152, 164, 218);
 }

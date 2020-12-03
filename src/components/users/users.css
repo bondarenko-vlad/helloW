@@ -1,0 +1,35 @@
+.user{
+    background: linear-gradient(90deg, rgb(124, 153, 242), white, rgb(73, 115, 241));
+    max-width: 500px;
+    margin: 20px auto;
+    color: rgb(0, 44, 88);
+    font-size: 22px;
+    display: grid;
+    grid-template-areas: 'photo info button';
+    grid-template-columns: 3fr 6fr 3fr;
+
+}
+.user button {
+    padding: 15px;
+    margin: 10px;
+    float: right;
+    grid-area: button;
+    background: radial-gradient(rgb(150, 126, 247),rgb(56, 61, 110));
+    font-weight: 900;
+    
+}
+.user button:hover{
+    background: radial-gradient(#fff,rgb(150, 126, 247));
+}
+.user img {
+    width: 80px;
+    height: 80px;
+    margin: 5px;
+    grid-area: photo;
+}
+.userName{
+    grid-area: info;
+}
+.user .status{
+    font-size: 16px;
+}
